@@ -3,7 +3,7 @@ import logo   from '../images/Vector.svg'
 const Navbar = () => {
     return (
         <nav className='nav-bar' >
-            <img className='logo' src={logo} alt="airbnb_logo" />
+            <img className='nav--logo' src={logo} alt="airbnb_logo" />
         </nav>
     )
 }
