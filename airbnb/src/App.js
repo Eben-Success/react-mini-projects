@@ -5,7 +5,7 @@ import Main from './component/Main';
 function App() {
   return (
     <div className="container" >
-      <NavBar />
+      <Navbar />
       <Main />
     </div>
   )
