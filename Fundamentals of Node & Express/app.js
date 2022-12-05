@@ -1,9 +1,15 @@
-const names = require('./names')
-const sayHi = require('./util')
-const {eben, john} = require("./names");
-const data = require('./alternative-flavor')
+// asynchronous: non-locking
+// synchronous: blocking
 
-console.log(data)
-console.log(names)
-console.log(sayHi(john))
-console.log(sayHi(eben))
+// destructing
+const {readFileSync, writeFileSync} = require('fs');
+
+// Read file using utf-8 encoding.
+const first = readFileSync('./content/first.txt', 'utf-8');
+const second = readFileSync('./content/second.txt', 'utf-8');
+
+// write to a file
+writeFileSync('./content/result-sync.txt', `Here is the result: ${first}, ${second}`);
+
+console.log(first);
+console.log(second);
